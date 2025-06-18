@@ -12,5 +12,5 @@ print("divide",a/b)
 # print("hello world", 6, 7 , sep="~")
 # simple arithmatic calculator
 
-# a=float(input("enter the number:"))
-# b=float(input("enter the number:"))
+a=float(input("enter the number:"))
+b=float(input("enter the number:"))

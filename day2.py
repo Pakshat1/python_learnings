@@ -48,3 +48,4 @@ print(len(name))
 
 nm="Harry"
 print(nm[-4:-2])
+
