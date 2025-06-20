@@ -32,4 +32,7 @@ else:
         factorial *= i
     print(f"The factorial of {n} is {factorial}.")
 
+
+for k in range(2,20,2):
+    print(k)
         
