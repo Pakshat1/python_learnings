@@ -1,27 +1,27 @@
 # find geometric mean of two numbers
 
-# def geometric_mean(a, b):
-#     mean = (a * b) / (a + b)
-#     print("Geometric mean of", a, "and", b, "is", mean)
+def geometric_mean(a, b):
+    mean = (a * b) / (a + b)
+    print("Geometric mean of", a, "and", b, "is", mean)
 
-# def isGrater(a, b):
-#     if (a > b):
-#        print(a, "is greater than", b)
-#     else:
-#        print(b, "is greater than", a)
+def isGrater(a, b):
+    if (a > b):
+       print(a, "is greater than", b)
+    else:
+       print(b, "is greater than", a)
 
-# def isless(a, b):
-#     pass
+def isless(a, b):
+    pass
 
-# a=6
-# b=8
-# geometric_mean(a, b)
-# isGrater(a, b)
+a=6
+b=8
+geometric_mean(a, b)
+isGrater(a, b)
                
-# c=8
-# d=3
-# geometric_mean(c, d)
-# isGrater(c, d)
+c=8
+d=3
+geometric_mean(c, d)
+isGrater(c, d)
 
 # function returning multiple values
 def calculate(a, b):
