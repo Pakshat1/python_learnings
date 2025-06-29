@@ -41,3 +41,30 @@ def power(base, exp):
         return base * power(base, exp - 1)
 print(power(3, 4))  #output: 81
 
+# sum of digits function
+# This function calculates the sum of the digits of a number using recursion.   
+def sum_of_digits(n):
+    if n == 0:
+        return 0
+    else:
+        return n % 10 + sum_of_digits(n // 10)
+print(sum_of_digits(12345))  #output: 15
+
+# reverse a string function
+# This function reverses a string using recursion.  
+def reverse_string(s):
+    if len(s) == 0:
+        return s
+    else:
+        return s[-1] + reverse_string(s[:-1])
+print(reverse_string("hello"))  #output: "olleh"
+
+# check if a string is a palindrome function
+# This function checks if a string is a palindrome using recursion. 
+def is_palindrome(s):
+    if len(s) <= 1:
+        return True
+    else:
+        return s[0] == s[-1] and is_palindrome(s[1:-1])
+print(is_palindrome("racecar"))  #output: True
+print(is_palindrome("hello"))    #output: False

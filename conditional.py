@@ -16,6 +16,7 @@ else:
   print("You cannot drive")
   print("No")
   print("Yay!")
+    
 
 
 applePrice = 10

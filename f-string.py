@@ -23,7 +23,7 @@ print(f"{name} lives in {city}.")
 x = 5       
 y = 10
 print(f"The sum of {x} and {y} is {x + y}.")    
-# output: The sum of 5 and 10 is 15.
+# output: 
 
 # Using f-strings with method calls
 def greet(name):
