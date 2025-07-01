@@ -1,0 +1,107 @@
+# error handling (try, except, else, finally)
+
+
+# def divide_numbers(num1, num2):
+#     try:
+#         result = num1 / num2
+#     except ZeroDivisionError as e:
+#         print(f"Error: Cannot divide by zero. {e}")
+#         return None
+#     except TypeError as e:
+#         print(f"Error: Invalid input type. {e}")
+#         return None
+#     else:
+#         return result
+#     finally:
+#         print("Execution of divide_numbers completed.")
+# print(divide_numbers(10, 0))       
+# print(divide_numbers(10, 'a'))
+# print(divide_numbers(10, 5))
+# Output:
+# Error: Cannot divide by zero. division by zero    
+# Execution of divide_numbers completed.
+# Error: Invalid input type. unsupported operand type(s) for /: 'int' and 'str'
+# Execution of divide_numbers completed.
+# 2.0
+# Execution of divide_numbers completed.
+# Note: The finally block always executes, regardless of whether an exception occurred or not.
+# This is useful for cleanup actions, such as closing files or releasing resources. 
+
+
+# Example of using try, except, else, and finally
+import os   
+
+# Step 1: Create 'example.txt' if it doesn't exist
+example_file_path = 'example.txt'
+if not os.path.exists(example_file_path):
+    with open(example_file_path, 'w') as file:
+        file.write("Hello, Ak!")
+
+# Step 2: Function to read files with exception handling
+def read_file(file_path):
+    try:
+        file = open(file_path, 'r')
+    except FileNotFoundError as e:
+        print(f"Error: File not found. {e}")
+        return None
+    else:
+        content = file.read()
+        return content
+    finally:
+        if 'file' in locals():
+            file.close()
+            print("File closed.")
+
+# Step 3: Test both files
+print(read_file('non_existent_file.txt'))
+print(read_file('example.txt'))
+# Output:
+# Error: File not found. [Errno 2] No such file or directory: 'non_existent_file.txt'
+# File closed.  
+# None
+# Hello, Ak!
+# File closed.
+# Note: The finally block ensures that the file is closed whether an exception occurs or not.
+# This is important for resource management and preventing memory leaks.    
+# Step 4: Clean up by removing 'example.txt'
+if os.path.exists(example_file_path):
+    os.remove(example_file_path)
+    print(f"Removed {example_file_path}")
+else:
+    print(f"{example_file_path} does not exist.")
+# Output:
+# Removed example.txt   
+# Note: The code above demonstrates how to handle file operations with error handling.
+# It ensures that resources are properly managed and exceptions are handled gracefully.
+
+
+# Example of using try, except, else, and finally with a custom exception
+class CustomError(Exception):
+    """Custom exception for demonstration purposes."""
+    pass
+def risky_operation():
+    try:
+        # Simulating a risky operation that raises a custom exception
+        raise CustomError("light weigth!! BUDDY .")
+    except CustomError as e:
+        print(f"CustomError caught: {e}")
+    else:
+        # This block executes if no exceptions were raised
+        print("No errors occurred.")
+    finally:
+        print("Risky operation completed.")
+# Step 5: Test the risky operation
+print(risky_operation( ))
+# Output:
+# CustomError caught: This is a custom error message.   
+# Risky operation completed.
+# None  
+# Note: This example shows how to define and raise a custom exception.
+# It demonstrates the use of try, except, else, and finally blocks to handle errors gracefully
+# and ensure that cleanup actions are performed.
+
+# Example of using try, except, else, and finally with a context manager
+
+
+
+
