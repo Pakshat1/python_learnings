@@ -142,6 +142,37 @@ print("Removed context_example.txt")
 # Removed context_example.txt
       
 
+# raising costom error
+class InvalidAgeError(Exception):
+    """Custom exception for invalid age input."""
+    pass
+def validate_age(age):
+    if age < 0:
+        raise InvalidAgeError("Age cannot be negative.")
+    elif age > 120:
+        raise InvalidAgeError("Age is unrealistically high.")
+    else:
+        print(f"Valid age: {age}")
+# Step 9: Test the validate_age function
+try:
+    validate_age(-5)    
+except InvalidAgeError as e:
+    print(f"InvalidAgeError caught: {e}")
+try:
+    validate_age(150)
+except InvalidAgeError as e:
+    print(f"InvalidAgeError caught: {e}")
+try:
+    validate_age(25)
+except InvalidAgeError as e:
+    print(f"InvalidAgeError caught: {e}")
+# Output:
+# InvalidAgeError caught: Age cannot be negative.
+# InvalidAgeError caught: Age is unrealistically high. 
+# Valid age: 25
+# Note: This example demonstrates how to define and raise a custom exception for input validation.
+# It shows how to handle specific error conditions and provide meaningful error messages.
+
 
 
 
