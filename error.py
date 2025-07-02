@@ -1,22 +1,22 @@
 # error handling (try, except, else, finally)
 
 
-# def divide_numbers(num1, num2):
-#     try:
-#         result = num1 / num2
-#     except ZeroDivisionError as e:
-#         print(f"Error: Cannot divide by zero. {e}")
-#         return None
-#     except TypeError as e:
-#         print(f"Error: Invalid input type. {e}")
-#         return None
-#     else:
-#         return result
-#     finally:
-#         print("Execution of divide_numbers completed.")
-# print(divide_numbers(10, 0))       
-# print(divide_numbers(10, 'a'))
-# print(divide_numbers(10, 5))
+def divide_numbers(num1, num2):
+    try:
+        result = num1 / num2
+    except ZeroDivisionError as e:
+        print(f"Error: Cannot divide by zero. {e}")
+        return None
+    except TypeError as e:
+        print(f"Error: Invalid input type. {e}")
+        return None
+    else:
+        return result
+    finally:
+        print("Execution of divide_numbers completed.")
+print(divide_numbers(10, 0))       
+print(divide_numbers(10, 'a'))
+print(divide_numbers(10, 5))
 # Output:
 # Error: Cannot divide by zero. division by zero    
 # Execution of divide_numbers completed.
@@ -173,6 +173,25 @@ except InvalidAgeError as e:
 # Note: This example demonstrates how to define and raise a custom exception for input validation.
 # It shows how to handle specific error conditions and provide meaningful error messages.
 
+
+# Exception Types and Custom Exceptions
+# Python has several built-in exception types, such as ValueError, TypeError, and KeyError.
+# ZeroDivisionError
+a= 10
+b = 0
+try:
+    result = a / b
+except ZeroDivisionError as e:
+    print(f"ZeroDivisionError caught: {e}")
+# Output:
+# ZeroDivisionError caught: division by zero
+# TypeError
+try:
+    result = a + "string"
+except TypeError as e:
+    print(f"TypeError caught: {e}")
+# Output:
+# TypeError caught: unsupported operand type(s) for +: 'int' and 'str'
 
 
 
