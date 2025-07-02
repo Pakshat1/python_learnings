@@ -195,6 +195,39 @@ except TypeError as e:
 
 
 
+#  open(file_path, 'w')
+import os
+
+# Step 1: Write to the file
+with open('output.txt', 'w') as file:
+    file.write("Hello, World!")
+
+# Step 2: Read the file with error handling
+def read_output_file(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            content = file.read()
+            print(content)
+    except FileNotFoundError as e:
+        print(f"Error: File not found. {e}")
+    except IOError as e:
+        print(f"Error: An I/O error occurred. {e}")
+    else:
+        print("File read successfully.")
+    finally:
+        print("Finished reading the file.")
+
+#  Now call the function to actually read the file
+read_output_file('output.txt')
+
+# Step 3: Clean up
+if os.path.exists('output.txt'):
+    os.remove('output.txt')
+    print("Removed output.txt")
+else:
+    print("output.txt does not exist.")
+  
+
 
 
 
