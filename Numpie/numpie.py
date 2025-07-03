@@ -129,14 +129,35 @@ for element in reshaped_array.flat:
 # output:
 # Iterating over all elements in the reshaped array:    
 # 1 2 3 4 5 6 
-# convets to another data type
-converted_array = reshaped_array.astype("bool ,float")
+# convets to another data type using .astype()
+converted_array = reshaped_array.astype(float)
 print("Converted Array to Float:\n", converted_array)
 # output:
 # Converted Array to Float:
 # [[1. 2. 3.]
 #  [4. 5. 6.]]
-#   
+#  convert to another data type using .astype()
+converted_array = reshaped_array.astype(bool)
+print("Converted Array to Boolean:\n", converted_array)
+# output:
+# Converted Array to Boolean:
+# [[ True  True  True]
+#  [ True  True  True]]
+
+# example ofo real and imaginary numbers
+complex_array = np.array([1 + 2j, 3 + 4j, 5 + 6j])
+print("Complex Array:", complex_array)  
+# output: Complex Array: [1.+2.j 3.+4.j 5.+6.j]
+# Get the real part of the complex array
+real_part = complex_array.real
+print("Real Part of Complex Array:", real_part) 
+# output: Real Part of Complex Array: [1. 3. 5.]
+# Get the imaginary part of the complex array
+imaginary_part = complex_array.imag
+print("Imaginary Part of Complex Array:", imaginary_part)
+# output: Imaginary Part of Complex Array: [2. 4. 6.]
+
+
 
 
 
