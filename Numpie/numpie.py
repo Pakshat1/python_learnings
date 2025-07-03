@@ -122,6 +122,24 @@ transposed_array = reshaped_array.T
 print("Transposed 3x2 Array:\n", transposed_array)
 
 
+# itrator over all array elements using .flat
+print("Iterating over all elements in the reshaped array:")
+for element in reshaped_array.flat:
+    print(element, end=' ')
+# output:
+# Iterating over all elements in the reshaped array:    
+# 1 2 3 4 5 6 
+# convets to another data type
+converted_array = reshaped_array.astype("bool ,float")
+print("Converted Array to Float:\n", converted_array)
+# output:
+# Converted Array to Float:
+# [[1. 2. 3.]
+#  [4. 5. 6.]]
+#   
+
+
+
 
 
 
