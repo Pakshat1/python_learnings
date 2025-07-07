@@ -38,3 +38,6 @@ mask = np.in1d(a, b)
 print("Boolean mask (a[i] in b):", mask)
 print("Values from a that are also in b:", a[mask])  # [4 5 5 6]
 
+
+
+

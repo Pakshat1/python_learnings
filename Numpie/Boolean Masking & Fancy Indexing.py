@@ -46,3 +46,5 @@ print("np.extract (elements > 5):", extracted)  # [6 8 7]
 chained_mask = (arr > 5) & (arr < 10)
 print("Chained mask (6 < arr < 10):", arr[chained_mask])  # [6 8 7]
 
+
+
