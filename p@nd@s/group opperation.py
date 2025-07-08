@@ -78,4 +78,4 @@ print("\nReset index:\n", reset_df)
 # 2       HR      F  50000.0
 # 3       HR      M  52000.0
 # 4       IT      F  61000.0
-# 5       IT      M  61500.0
+# 5       IT      M  61500.0  

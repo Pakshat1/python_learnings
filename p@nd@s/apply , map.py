@@ -32,6 +32,15 @@ print(df)
 print("\nNumeric columns doubled:")
 print(df_numeric)
 
-
-
 # output 
+#       Name  Marks  Age  Updated_Marks Status
+# 0    ALICE     88   23             93   Fail
+# 1      BOB     92   22             97   Pass
+# 2  CHARLIE     85   24             90   Fail
+
+# Numeric columns doubled:
+#    Marks  Age
+# 0    176   46
+# 1    184   44
+# 2    170   48  
+
