@@ -89,3 +89,39 @@ print(df)
 # 1      Bob     92   22         4.0
 # 4  Charlie     85   24         1.0
 # 2    David     90   23         3.0
+
+# Rank_average: Ties get the average of their rank positions.
+# Rank_min: Ties get the lowest rank in the group.
+# Rank_max: Ties get the highest rank in the group.
+# Rank_first: Ranks based on first appearance in the DataFrame.
+# Rank_dense: Like min, but doesn’t skip ranks after ties.
+
+import pandas as pd
+
+# Sample data: Student scores
+data = {
+    'Student': ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Frank'],
+    'Score': [95, 85, 85, 80, 75, 75]
+}
+df = pd.DataFrame(data)
+
+# Apply different ranking methods
+df['Rank_average'] = df['Score'].rank(method='average', ascending=True)
+df['Rank_min'] = df['Score'].rank(method='min', ascending=True)
+df['Rank_max'] = df['Score'].rank(method='max', ascending=True)
+df['Rank_first'] = df['Score'].rank(method='first', ascending=True)
+df['Rank_dense'] = df['Score'].rank(method='dense', ascending=True)
+
+# Display result
+print(df)
+
+
+# output
+#   Student  Score  Rank_average  Rank_min  Rank_max  Rank_first  Rank_dense
+# 0   Alice     95           6.0       6.0       6.0         6.0         5.0
+# 1     Bob     85           4.5       4.0       5.0         4.0         4.0
+# 2 Charlie     85           4.5       4.0       5.0         5.0         4.0
+# 3   David     80           3.0       3.0       3.0         3.0         3.0
+# 4     Eva     75           1.5       1.0       2.0         1.0         2.0
+# 5   Frank     75           1.5       1.0       2.0         2.0         2.0
+
