@@ -1,0 +1,30 @@
+[
+  {
+    "Employee":"Alice",
+    "Department":"HR",
+    "Base Salary":50000,
+    "Bonus":5000,
+    "Total Pay":55000
+  },
+  {
+    "Employee":"Bob",
+    "Department":"IT",
+    "Base Salary":60000,
+    "Bonus":7000,
+    "Total Pay":67000
+  },
+  {
+    "Employee":"Charlie",
+    "Department":"Finance",
+    "Base Salary":70000,
+    "Bonus":6000,
+    "Total Pay":76000
+  },
+  {
+    "Employee":"David",
+    "Department":"HR",
+    "Base Salary":52000,
+    "Bonus":4000,
+    "Total Pay":56000
+  }
+]
