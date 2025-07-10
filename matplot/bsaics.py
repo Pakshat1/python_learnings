@@ -12,11 +12,11 @@
 # 
 import matplotlib.pyplot as plt
 
-x = [1, 2, 3, 4, 5]
-y = [5, 7, 4, 8, 6]
+# x = [1, 2, 3, 4, 5]
+# y = [5, 7, 4, 8, 6]
 
-plt.plot(x, y)            # Create the line chart
-plt.show()                # Show the figure
+# plt.plot(x, y)            # Create the line chart
+# plt.show()                # Show the figure
 
 
 # creating box plot
@@ -33,5 +33,44 @@ plt.title("My First Plot")         # Adds title to the chart
 plt.xlabel("X Values")             # X-axis label
 plt.ylabel("Y Values")             # Y-axis label
 plt.show()
+
+# line style, color and  markers 
+
+# | Parameter   | Example        | Description                 |
+# | ----------- | -------------- | --------------------------- |
+# | `color`     | `'red'`        | Line color                  |
+# | `linestyle` | `'--'`, `'-.'` | Line style (dashed, dotted) |
+# | `marker`    | `'o'`, `'s'`   | Markers at each data point  |
+
+plt.plot(x, y, color='green', linestyle='--', marker='o')
+plt.title("Styled Line")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show()
+
+# figure size and resolution
+# Use plt.figure() to set size and resolution (DPI)
+
+plt.figure(figsize=(8, 4), dpi=100)  # 8x4 inches, 100 dots per inch
+plt.plot(x, y, marker='o')
+plt.title("Custom Size Plot")
+plt.show()
+
+# saving the plot to file 
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 13, 18, 14]
+
+plt.plot(x, y, marker='o', color='blue')
+plt.title("Saved Line Plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+
+# Save to the specified folder
+plt.savefig(r"C:\Users\patel\OneDrive\Documents\python\python_learnings\matplot\my_plot.png")
+
+plt.show()
+
 
 
